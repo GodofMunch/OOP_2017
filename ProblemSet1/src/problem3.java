@@ -3,16 +3,19 @@
  */
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
+import java.awt.*;
+
 public class problem3 {
     public static void main(String[] args) {
 
         float length, breadth, costPerSqM, area ,cost;
         String name;
-        JTextArea myTextArea = new JTextArea(30,100);
+        JTextArea myTextArea = new JTextArea(30,30);
+        Font myFont = new Font(mon)
 
         name = JOptionPane.showInputDialog("Please enter your name");
-        myTextArea.append("Qoutation for " + name + " :\n");
-
+        myTextArea.append("Quotation for " + name + " :\n");
+        myTextArea.setFont();
         length = Float.parseFloat(JOptionPane.showInputDialog("Please enter the length of your room"));
         breadth = Float.parseFloat(JOptionPane.showInputDialog("Please enter the breadth of your room"));
         area = length*breadth;
