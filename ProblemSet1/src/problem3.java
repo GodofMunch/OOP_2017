@@ -11,11 +11,11 @@ public class problem3 {
         float length, breadth, costPerSqM, area ,cost;
         String name;
         JTextArea myTextArea = new JTextArea(30,30);
-        Font myFont = new Font(mon)
+        Font myFont = new Font(Font.MONOSPACED,Font.PLAIN,12);
 
         name = JOptionPane.showInputDialog("Please enter your name");
         myTextArea.append("Quotation for " + name + " :\n");
-        myTextArea.setFont();
+        myTextArea.setFont(myFont);
         length = Float.parseFloat(JOptionPane.showInputDialog("Please enter the length of your room"));
         breadth = Float.parseFloat(JOptionPane.showInputDialog("Please enter the breadth of your room"));
         area = length*breadth;

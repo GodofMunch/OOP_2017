@@ -12,11 +12,6 @@ public class problem4 {
         nameLength=name.length();
         firstInitial = name.charAt(0);
         caps = name.toUpperCase();
-
-        for(i=0;i<nameLength;i++)
-          if(name.charAt(i)==' ')
-              spaceFinder=i;
-
         spaceFinder = name.lastIndexOf(' ');
         surname = name.substring(spaceFinder, nameLength);
 
