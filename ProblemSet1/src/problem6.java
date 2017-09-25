@@ -18,6 +18,17 @@ public class problem6 {
         for(int i=1;i<=15;i++)
         {
           cube = myCubeCalculator(i);
+
+          cubeList = String.format("\n%-10d%-10d", i, cube);
+
+          JTextArea.append(cubeList);
         }
+    }
+
+    public static int myCubeCalculator(int i)
+    {
+        int cube = Math.pow(i,3);
+
+        return cube;
     }
 }
