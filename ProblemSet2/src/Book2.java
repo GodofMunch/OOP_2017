@@ -49,6 +49,7 @@ public class Book2 {
     } //This is also a constructor method!!!!!
 
     public String toString() {
-        return String.format("\n%-20s\n%-20s\n%-20d\n%.2f €", getTitle(), getIsbn(), getPages(), getPrice());
+        return String.format("\n%-20s%-20s\n%-20s%-20s\n%-20s%-20d\n%-20s%.2f €", "Title:",
+                getTitle(),"ISBN:", getIsbn(),"Number of Pages:", getPages(),"Price:", getPrice());
     }
 }
