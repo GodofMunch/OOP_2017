@@ -26,10 +26,16 @@ public class MyPoint {
         setY(y);
     }
 
+    public int distanceFromOrigin(int x, int y) {
+
+        int hypotenuse = (int)Math.sqrt(moveHorizontally(getX()), moveVertically(getY()))
+
+        return hypotenuse;
+    }
+
     public String toString() {
 
-        String xAndY="";
-
+        String xAndY= String.format("%-20s%d", "You have moved a total of " , distanceFromOrigin(this.getX(), this.getY()));
 
         return xAndY;
     }
