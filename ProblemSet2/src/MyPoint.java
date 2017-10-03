@@ -28,9 +28,10 @@ public class MyPoint {
 
     public int distanceFromOrigin(int x, int y) {
 
-        int hypotenuse = (int)Math.sqrt(moveHorizontally(getX()), moveVertically(getY()))
+        double hypotenuse = Math.sqrt((x*x) + (y*y));
+        int hypotenuseInt = (int)hypotenuse;
 
-        return hypotenuse;
+        return hypotenuseInt;
     }
 
     public String toString() {

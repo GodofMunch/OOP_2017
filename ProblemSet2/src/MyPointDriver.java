@@ -7,7 +7,7 @@ import java.awt.*;
 public class MyPointDriver {
     public static void main(String[] args) {
 
-        String pointList="", user;
+        String  user;
         int userX=0, userY=0;
 
         JTextArea myText = new JTextArea();
@@ -15,6 +15,7 @@ public class MyPointDriver {
         myText.setFont(myFont);
         MyPoint p1 = new MyPoint(userX,userY);
         MyPoint p2 = new MyPoint();
+        boolean valid = true;
 
         user = JOptionPane.showInputDialog("Please enter up if you would like to move vertically, " +
         "left if you would like to move horizontally, or both if you would like to do both");
@@ -48,9 +49,12 @@ public class MyPointDriver {
 
 
 
-        else
+        else {
             JOptionPane.showMessageDialog(null, "You entered nothing");
+            valid = false;
+        }
 
+        if(valid)
         JOptionPane.showMessageDialog(null, myText);
 
         System.exit(0);
