@@ -104,13 +104,14 @@ public class DoughNut {
         this.vanillaExtractTeaSpoon = vanillaExtractTeaSpoon;
     }
 
-    public DoughNut(int eggs, int flourGrams, int yeastGrams, int milkMl, int casterSugarGram, int butterGram,
+    public DoughNut(int eggs, int flourGrams, int yeastGrams, int warmWaterMl, int milkMl, int casterSugarGram, int butterGram,
                     int afterButterGrams, int vegetableOilMl, int icingSugarGrams, int hotWaterMl,
                     double vanillaExtractTeaSpoon)
     {
         setEggs(eggs);
         setFlourGrams(flourGrams);
         setYeastGrams(yeastGrams);
+        setWarmWaterMl(warmWaterMl);
         setMilkMl(milkMl);
         setCasterSugarGram(casterSugarGram);
         setButterGram(butterGram);
@@ -123,8 +124,8 @@ public class DoughNut {
 
     public DoughNut()
     {
-        this(0,0,0,0,0,0,
-                0,0, 0,0,0.0);
+        this(0,0,0,0,0,0,0,0,
+                0,0,0,0.0);
     }
 
     public String toString()
@@ -134,7 +135,7 @@ public class DoughNut {
         return doughnutText;
     }
 
-    public boolean enoughEggs(int eggs)
+    public static boolean enoughEggs(int eggs)
     {
         int perfect = 2;
 
@@ -144,7 +145,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughFlour(int flourGrams)
+    public static boolean enoughFlour(int flourGrams)
     {
         int perfect = 650;
 
@@ -154,7 +155,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughYeast(int yeastGrams)
+    public static boolean enoughYeast(int yeastGrams)
     {
         int perfect = 14;
 
@@ -164,7 +165,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughWarmWater(int warmWaterMl)
+    public static boolean enoughWarmWater(int warmWaterMl)
     {
         int perfect = 60;
 
@@ -174,7 +175,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughMilk(int milkMl)
+    public static boolean enoughMilk(int milkMl)
     {
         int perfect =350;
 
@@ -184,7 +185,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughCastorSugar(int casterSugarGram)
+    public static boolean enoughCastorSugar(int casterSugarGram)
     {
         int perfect = 100;
 
@@ -194,7 +195,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughButter(int butterGram)
+    public static boolean enoughButter(int butterGram)
     {
         int perfect = 70;
 
@@ -204,7 +205,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughAfterButter(int afterButterGrams)
+    public static boolean enoughAfterButter(int afterButterGrams)
     {
         int perfect = 70;
 
@@ -214,7 +215,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughVegetableOil(int vegetableOilMl)
+    public static boolean enoughVegetableOil(int vegetableOilMl)
     {
         int perfect = 1000;
 
@@ -224,7 +225,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughIcingSugar(int icingSugarGrams)
+    public static boolean enoughIcingSugar(int icingSugarGrams)
     {
         int perfect = 250;
 
@@ -234,7 +235,7 @@ public class DoughNut {
             return true;
     }
 
-    public boolean enoughHotWater(int hotWaterMl)
+    public static boolean enoughHotWater(int hotWaterMl)
     {
         int perfect = 60;
 
@@ -244,7 +245,7 @@ public class DoughNut {
             return false;
     }
 
-    public boolean enoughVaniilaExtract(double vanillaExtractTeaSpoon)
+    public static boolean enoughVaniilaExtract(double vanillaExtractTeaSpoon)
     {
         double perfect = 1.5;
 
