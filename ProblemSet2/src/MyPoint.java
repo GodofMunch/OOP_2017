@@ -13,13 +13,19 @@ public class MyPoint {
 
     public void setY(int y) { this.y = y; }
 
-    public MyPoint() {this (0, 0); }
+    public MyPoint()
+    {
+        this (0, 0);
+    }
 
     public void moveHorizontally(int x) { this.x += x; }
 
     public void moveVertically(int y) { this.y += y; }
 
-    public void translate(int x, int y) {this.y += y; this.x += x;}
+    public void translate(int x, int y)
+    {
+        this.y += y; this.x += x;
+    }
 
     public MyPoint(int x, int y) {
         setX(x);
