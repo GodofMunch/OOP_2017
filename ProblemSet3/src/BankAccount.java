@@ -1,4 +1,4 @@
-public class BankAccount {
+public abstract class BankAccount implements iTransactable ,iTaxable {
 
     protected String name;
     protected int accNum;
@@ -33,8 +33,9 @@ public class BankAccount {
     {
         String text;
 
-        text = String.format("\n%-10s&-10s\n%-10s&-10d", "Name :", getName(), "Account Number :", getAccNum());
+        text = String.format("\n%-20s%10s\n%-20s%10d", "Name :", getName(), "Account Number :", getAccNum());
 
         return text;
     }
+
 }
